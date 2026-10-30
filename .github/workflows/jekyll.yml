@@ -64,7 +64,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
-    if: ${{ false }} # disabled: this repository is a fork and the Actions token cannot create the Pages site; enable Pages in Settings to deploy
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
